@@ -47,9 +47,9 @@ class Path_Finder(object):
                 totalWeight += weight
                 totalValue += value
 
-        print("Gesamtgewicht:   ", totalWeight)
-        print("Gesamtpreis:     ", totalValue)
-        print("Sammelorte:      ", locationsToCollect)
+        print("Total weight:    ", totalWeight)
+        print("Total value:     ", totalValue)
+        print("Nodes to collect:", locationsToCollect)
         return
 
     '''
@@ -175,6 +175,5 @@ class Path_Finder(object):
 Main function to run the Path_Finder
 '''
 if __name__ == '__main__':
-
     pf = Path_Finder(6, 7, "rtp_0_7.txt")
     pf.createRoute()
