@@ -16,7 +16,7 @@ It calculates the distance to each node from the ***bb_list*** using the class o
 It then chooses the shortest distance to the next node, changes the current position to the next node, excludes it from the ***bb_list***, and starts searching again for the next node.
 This loop ends when every node from the ***bb_list*** has been visited and the final node is reached. The program ends with the output of the solution.
 
-## Example of a textfile
+## Example of a text file
 ```
 #META
 name = Problem 0
