@@ -175,5 +175,5 @@ class PathFinder(object):
 Main function to run the Path_Finder
 '''
 if __name__ == '__main__':
-    pf = PathFinder(6, 7, "nodes/rtp_0_7.txt")
+    pf = PathFinder(6, 7, "../nodes/rtp_0_7.txt")
     pf.createRoute()
