@@ -2,7 +2,7 @@ from queue import PriorityQueue
 '''
 Class for the Branch and Bound algorithm
 '''
-class Branch_Bound():
+class BranchBound():
     '''
     items: List, that contains the (weight, value) of an object, that can be collected
     max_capacity: The maximum capacity, that the thief can lift, it's "k" of the .txt file

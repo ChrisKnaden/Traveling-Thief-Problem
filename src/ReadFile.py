@@ -1,7 +1,7 @@
 '''
-Class to read and interpret the data of the .txt files
+Class to read and interpret the nodes of the .txt files
 '''
-class Read_File(object):
+class ReadFile(object):
     '''
     items: List, that contains the (weight, value) of an object, that can be collected
     max_capacity: The maximum capacity, that the thief can lift, it's "k" of the .txt file
@@ -21,7 +21,7 @@ class Read_File(object):
     global maxNodes
 
     """
-    Import an instance from file and overwrite the default global data. This method only reads the necessary nodes 
+    Import an instance from file and overwrite the default global nodes. This method only reads the necessary nodes 
     information on weights and utility of objects as well as the maximum capacity of the knapsack (k). The method
     returns items, neighbours, coordinates, ratioed_items and max_capacity.
     fields: Each line of the .txt file is splitted by the blank character

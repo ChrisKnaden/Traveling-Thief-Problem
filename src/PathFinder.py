@@ -1,12 +1,12 @@
-import Read_File
-import Branch_Bound
+import ReadFile
+import BranchBound
 import Dijkstra
 import math
 
 '''
 Main Class for the Running-Thief-Problem
 '''
-class Path_Finder(object):
+class PathFinder(object):
     '''
     Constructor that reads the .txt file and uses the Branch and Bound algorithm to find the optimal Nodes to collect.
     start: Starting Node
@@ -23,9 +23,9 @@ class Path_Finder(object):
     def __init__(self, start, end, filename):
         self.start = start
         self.end = end
-        rf = Read_File.Read_File(filename)
+        rf = ReadFile.ReadFile(filename)
         self.items, self.neighbours, self.coordinates, self.ratioed_items, self.max_capacity = rf.readInstance()
-        bb = Branch_Bound.Branch_Bound(self.items, self.max_capacity, self.ratioed_items)
+        bb = BranchBound.BranchBound(self.items, self.max_capacity, self.ratioed_items)
         self.bb_list = bb.executeBB()
         self.graph = self.convertToGraph()
 
@@ -175,5 +175,5 @@ class Path_Finder(object):
 Main function to run the Path_Finder
 '''
 if __name__ == '__main__':
-    pf = Path_Finder(6, 7, "rtp_0_7.txt")
+    pf = PathFinder(6, 7, "nodes/rtp_0_7.txt")
     pf.createRoute()

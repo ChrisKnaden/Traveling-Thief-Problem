@@ -4,15 +4,15 @@ as possible to avoid being caught by the police. The items have different values
 To solve this problem, you need to pay attention to the maximum capacity, the value/weight ratio and the shortest way to collect the items.
 
 ## Logic of the program
-The [Path_Finder.py](Traveling_Thief_Problem/Path_Finder.py) is the main program that calls other methods from different classes.
+The [Path_Finder.py](src/PathFinder.py) is the main program that calls other methods from different classes.
 Before you start the program, you must enter the desired start and end nodes and a text file. The text file is like a map
 of places where you can steal goods, and also contains how much weight the thief can carry. The structure of the text file can be seen below. 
 
-After that the text file is loaded by using the class from [Read_File.py](Traveling_Thief_Problem/Read_File.py). 
-Based on this data, a list of nodes to visit named ***bb_list*** is created using the class from [Branch_Bound.py](Traveling_Thief_Problem/Branch_Bound.py).
+After that the text file is loaded by using the class from [Read_File.py](src/ReadFile.py). 
+Based on this data, a list of nodes to visit named ***bb_list*** is created using the class from [Branch_Bound.py](src/BranchBound.py).
 
 Then, the Path_Finder creates the route for the thief. To do this, it uses the previously specified starting node as the first reference point to get to the next node.
-It calculates the distance to each node from the ***bb_list*** using the class of [Dijkstra.py](Traveling_Thief_Problem/Dijkstra.py). 
+It calculates the distance to each node from the ***bb_list*** using the class of [Dijkstra.py](src/Dijkstra.py). 
 It then chooses the shortest distance to the next node, changes the current position to the next node, excludes it from the ***bb_list***, and starts searching again for the next node.
 This loop ends when every node from the ***bb_list*** has been visited and the final node is reached. The program ends with the output of the solution.
 
